@@ -1,5 +1,5 @@
 use anyhow::Ok;
 
-pub fn helloWorld() -> anyhow::Result<String> {
+pub fn hello_world() -> anyhow::Result<String> {
     Ok("Hello World".to_string())
 }

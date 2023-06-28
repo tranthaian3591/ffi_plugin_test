@@ -30,7 +30,7 @@ class VysmaDesignImpl implements VysmaDesign {
   VysmaDesignImpl.raw(this._platform);
   Future<String> helloWorld({dynamic hint}) {
     return _platform.executeNormal(FlutterRustBridgeTask(
-      callFfi: (port_) => _platform.inner.wire_helloWorld(port_),
+      callFfi: (port_) => _platform.inner.wire_hello_world(port_),
       parseSuccessData: _wire2api_String,
       constMeta: kHelloWorldConstMeta,
       argValues: [],
@@ -39,7 +39,7 @@ class VysmaDesignImpl implements VysmaDesign {
   }
 
   FlutterRustBridgeTaskConstMeta get kHelloWorldConstMeta => const FlutterRustBridgeTaskConstMeta(
-        debugName: "helloWorld",
+        debugName: "hello_world",
         argNames: [],
       );
 
