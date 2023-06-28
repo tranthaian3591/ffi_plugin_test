@@ -1,0 +1,2 @@
+[workspace]
+members = ["packages/vysma_design/native"]
