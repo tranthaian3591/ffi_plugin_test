@@ -31,10 +31,13 @@ external VysmaDesignWasmModule get wasmModule;
 class VysmaDesignWasmModule implements WasmModule {
   external Object /* Promise */ call([String? moduleName]);
   external VysmaDesignWasmModule bind(dynamic thisArg, String moduleName);
+  external dynamic /* void */ wire_helloWorld(NativePortType port_);
 }
 
 // Section: WASM wire connector
 
 class VysmaDesignWire extends FlutterRustBridgeWasmWireBase<VysmaDesignWasmModule> {
   VysmaDesignWire(FutureOr<WasmModule> module) : super(WasmModule.cast<VysmaDesignWasmModule>(module));
+
+  void wire_helloWorld(NativePortType port_) => wasmModule.wire_helloWorld(port_);
 }

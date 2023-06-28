@@ -21,6 +21,16 @@ use std::sync::Arc;
 
 // Section: wire functions
 
+fn wire_helloWorld_impl(port_: MessagePort) {
+    FLUTTER_RUST_BRIDGE_HANDLER.wrap(
+        WrapInfo {
+            debug_name: "helloWorld",
+            port: Some(port_),
+            mode: FfiCallMode::Normal,
+        },
+        move || move |task_callback| helloWorld(),
+    )
+}
 // Section: wrapper structs
 
 // Section: static checks
@@ -57,6 +67,11 @@ mod web {
     use super::*;
     // Section: wire functions
 
+    #[wasm_bindgen]
+    pub fn wire_helloWorld(port_: MessagePort) {
+        wire_helloWorld_impl(port_)
+    }
+
     // Section: allocate functions
 
     // Section: related functions
@@ -72,6 +87,11 @@ pub use web::*;
 mod io {
     use super::*;
     // Section: wire functions
+
+    #[no_mangle]
+    pub extern "C" fn wire_helloWorld(port_: i64) {
+        wire_helloWorld_impl(port_)
+    }
 
     // Section: allocate functions
 

@@ -97,6 +97,17 @@ class VysmaDesignWire implements FlutterRustBridgeWireBase {
   late final _init_frb_dart_api_dlPtr = _lookup<ffi.NativeFunction<ffi.IntPtr Function(ffi.Pointer<ffi.Void>)>>('init_frb_dart_api_dl');
   late final _init_frb_dart_api_dl = _init_frb_dart_api_dlPtr.asFunction<int Function(ffi.Pointer<ffi.Void>)>();
 
+  void wire_helloWorld(
+    int port_,
+  ) {
+    return _wire_helloWorld(
+      port_,
+    );
+  }
+
+  late final _wire_helloWorldPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Int64)>>('wire_helloWorld');
+  late final _wire_helloWorld = _wire_helloWorldPtr.asFunction<void Function(int)>();
+
   void free_WireSyncReturn(
     WireSyncReturn ptr,
   ) {

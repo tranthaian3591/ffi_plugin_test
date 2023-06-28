@@ -15,7 +15,11 @@ import 'package:flutter_rust_bridge/flutter_rust_bridge.dart';
 import 'package:uuid/uuid.dart';
 import 'bridge_generated.io.dart' if (dart.library.html) 'bridge_generated.web.dart';
 
-abstract class VysmaDesign {}
+abstract class VysmaDesign {
+  Future<String> helloWorld({dynamic hint});
+
+  FlutterRustBridgeTaskConstMeta get kHelloWorldConstMeta;
+}
 
 class VysmaDesignImpl implements VysmaDesign {
   final VysmaDesignPlatform _platform;
@@ -24,10 +28,37 @@ class VysmaDesignImpl implements VysmaDesign {
   /// Only valid on web/WASM platforms.
   factory VysmaDesignImpl.wasm(FutureOr<WasmModule> module) => VysmaDesignImpl(module as ExternalLibrary);
   VysmaDesignImpl.raw(this._platform);
+  Future<String> helloWorld({dynamic hint}) {
+    return _platform.executeNormal(FlutterRustBridgeTask(
+      callFfi: (port_) => _platform.inner.wire_helloWorld(port_),
+      parseSuccessData: _wire2api_String,
+      constMeta: kHelloWorldConstMeta,
+      argValues: [],
+      hint: hint,
+    ));
+  }
+
+  FlutterRustBridgeTaskConstMeta get kHelloWorldConstMeta => const FlutterRustBridgeTaskConstMeta(
+        debugName: "helloWorld",
+        argNames: [],
+      );
+
   void dispose() {
     _platform.dispose();
   }
 // Section: wire2api
+
+  String _wire2api_String(dynamic raw) {
+    return raw as String;
+  }
+
+  int _wire2api_u8(dynamic raw) {
+    return raw as int;
+  }
+
+  Uint8List _wire2api_uint_8_list(dynamic raw) {
+    return raw as Uint8List;
+  }
 }
 
 // Section: api2wire
