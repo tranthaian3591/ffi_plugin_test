@@ -1,0 +1,23 @@
+version: 2
+enable-beta-ecosystems: true
+updates:
+  - package-ecosystem: pub
+    directory: "/packages/vysma_design"
+    schedule:
+      interval: weekly
+  - package-ecosystem: pub
+    directory: "/packages/vysma_design/example"
+    schedule:
+      interval: weekly
+  - package-ecosystem: pub
+    directory: "/packages/flutter_vysma_design"
+    schedule:
+      interval: weekly
+  - package-ecosystem: pub
+    directory: "/packages/flutter_vysma_design/example"
+    schedule:
+      interval: weekly
+  - package-ecosystem: cargo
+    directory: "/packages/vysma_design/native"
+    schedule:
+      interval: weekly
