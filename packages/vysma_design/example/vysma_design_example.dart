@@ -24,9 +24,7 @@ Future<void> run(String path, DynamicLibrary lib) async {
   // If you are going to use Flutter, don't pay too much attention to lib;
   // lib will be created for you automatically under the hood.
   // However, in pure Dart, you need to explicity state how to get it.
-  final instance = await VysmaDesignLib.getInstance(path: path, library: lib);
-
-  print(instance.path);
+  await VysmaDesignLib.getInstance(path: path, library: lib);
 }
 
 DynamicLibrary getLibrary() {

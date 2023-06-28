@@ -6,9 +6,7 @@ import 'package:flutter_vysma_design/flutter_vysma_design.dart';
 Future<void> main() async {
   runApp(const MyApp());
 
-  final instance = await VysmaDesignLib.defaultInstance;
-
-  print(instance.path);
+  await VysmaDesignLib.defaultInstance;
 }
 
 class MyApp extends StatefulWidget {

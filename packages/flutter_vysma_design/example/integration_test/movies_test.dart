@@ -1,9 +1,3 @@
-import 'dart:convert';
-import 'dart:js_interop';
-
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_vysma_design_example/main.dart';
 import 'package:flutter_vysma_design/flutter_vysma_design.dart';
 import 'package:flutter_test/flutter_test.dart';
 

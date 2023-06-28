@@ -1,5 +1,3 @@
-import 'package:vysma_design/vysma_design.dart';
-
 /// Represents an instance (essentially a group of indices) of VysmaDesign.
 ///
 /// You will often only need one instance, but you can
