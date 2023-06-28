@@ -17,7 +17,7 @@ dependencies:
   uuid: any
 
 dev_dependencies:
-  analyzer: ^6.0.0
+  analyzer: ^5.13.0
   build_runner: ^2.3.2
   ffigen: ^8.0.2
   freezed: ^2.2.1
