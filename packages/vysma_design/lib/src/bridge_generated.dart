@@ -13,8 +13,7 @@ import 'dart:async';
 import 'package:meta/meta.dart';
 import 'package:flutter_rust_bridge/flutter_rust_bridge.dart';
 import 'package:uuid/uuid.dart';
-import 'bridge_generated.io.dart'
-    if (dart.library.html) 'bridge_generated.web.dart';
+import 'bridge_generated.io.dart' if (dart.library.html) 'bridge_generated.web.dart';
 
 abstract class VysmaDesign {
   Future<String> helloWorld({dynamic hint});
@@ -24,12 +23,10 @@ abstract class VysmaDesign {
 
 class VysmaDesignImpl implements VysmaDesign {
   final VysmaDesignPlatform _platform;
-  factory VysmaDesignImpl(ExternalLibrary dylib) =>
-      VysmaDesignImpl.raw(VysmaDesignPlatform(dylib));
+  factory VysmaDesignImpl(ExternalLibrary dylib) => VysmaDesignImpl.raw(VysmaDesignPlatform(dylib));
 
   /// Only valid on web/WASM platforms.
-  factory VysmaDesignImpl.wasm(FutureOr<WasmModule> module) =>
-      VysmaDesignImpl(module as ExternalLibrary);
+  factory VysmaDesignImpl.wasm(FutureOr<WasmModule> module) => VysmaDesignImpl(module as ExternalLibrary);
   VysmaDesignImpl.raw(this._platform);
   Future<String> helloWorld({dynamic hint}) {
     return _platform.executeNormal(FlutterRustBridgeTask(
@@ -41,8 +38,7 @@ class VysmaDesignImpl implements VysmaDesign {
     ));
   }
 
-  FlutterRustBridgeTaskConstMeta get kHelloWorldConstMeta =>
-      const FlutterRustBridgeTaskConstMeta(
+  FlutterRustBridgeTaskConstMeta get kHelloWorldConstMeta => const FlutterRustBridgeTaskConstMeta(
         debugName: "hello_world",
         argNames: [],
       );

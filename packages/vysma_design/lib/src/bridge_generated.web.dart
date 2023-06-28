@@ -10,10 +10,8 @@ import 'package:uuid/uuid.dart';
 import 'bridge_generated.dart';
 export 'bridge_generated.dart';
 
-class VysmaDesignPlatform extends FlutterRustBridgeBase<VysmaDesignWire>
-    with FlutterRustBridgeSetupMixin {
-  VysmaDesignPlatform(FutureOr<WasmModule> dylib)
-      : super(VysmaDesignWire(dylib)) {
+class VysmaDesignPlatform extends FlutterRustBridgeBase<VysmaDesignWire> with FlutterRustBridgeSetupMixin {
+  VysmaDesignPlatform(FutureOr<WasmModule> dylib) : super(VysmaDesignWire(dylib)) {
     setupMixinConstructor();
   }
   Future<void> setup() => inner.init;
@@ -38,11 +36,8 @@ class VysmaDesignWasmModule implements WasmModule {
 
 // Section: WASM wire connector
 
-class VysmaDesignWire
-    extends FlutterRustBridgeWasmWireBase<VysmaDesignWasmModule> {
-  VysmaDesignWire(FutureOr<WasmModule> module)
-      : super(WasmModule.cast<VysmaDesignWasmModule>(module));
+class VysmaDesignWire extends FlutterRustBridgeWasmWireBase<VysmaDesignWasmModule> {
+  VysmaDesignWire(FutureOr<WasmModule> module) : super(WasmModule.cast<VysmaDesignWasmModule>(module));
 
-  void wire_hello_world(NativePortType port_) =>
-      wasmModule.wire_hello_world(port_);
+  void wire_hello_world(NativePortType port_) => wasmModule.wire_hello_world(port_);
 }

@@ -1,7 +1,7 @@
 name: vysma_design
 description: A starting point for Dart libraries or applications.
 version: 0.0.1
-repository: https://github.com/vysma/vysma_design
+repository: https://github.com/tranthaian3591/ffi_plugin_test
 
 environment:
   sdk: '>=3.0.0 <4.0.0'

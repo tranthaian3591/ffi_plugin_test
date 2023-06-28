@@ -1,6 +1,6 @@
 name: vysma_design
 
-repository: https://github.com/vysma/vysma_design
+repository: https://github.com/tranthaian3591/ffi_plugin_test
 
 packages:
   - packages/**
