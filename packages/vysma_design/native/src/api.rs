@@ -3,8 +3,8 @@ use serde_json::Value;
 
 use crate::structs::column_layout_struct::VysmaColumnLayoutSetting;
 
-pub fn create_root_widget_tree() -> VysmaColumnLayoutSetting {
-    return VysmaColumnLayoutSetting::default_setting();
+pub fn create_root_widget_tree() -> Result<VysmaColumnLayoutSetting> {
+    Ok(VysmaColumnLayoutSetting::default_setting())
 }
 
 pub fn column_layout_default_setting() -> Result<VysmaColumnLayoutSetting> {

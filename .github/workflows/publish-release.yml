@@ -5,6 +5,9 @@ on:
     tags:
       - "*"
 
+permissions:
+  contents: write
+  
 jobs:
   publish_github_release:
     # macOS because we can cross-compile to all other platforms from it

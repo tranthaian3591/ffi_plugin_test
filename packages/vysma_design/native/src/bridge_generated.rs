@@ -30,7 +30,7 @@ fn wire_create_root_widget_tree_impl(port_: MessagePort) {
             port: Some(port_),
             mode: FfiCallMode::Normal,
         },
-        move || move |task_callback| Ok(create_root_widget_tree()),
+        move || move |task_callback| create_root_widget_tree(),
     )
 }
 fn wire_column_layout_default_setting_impl(port_: MessagePort) {
