@@ -6,12 +6,12 @@ on:
       version_parameters:
         description: 'Parameters to pass to "melos version"'
         required: true
-        default: " "
+        default: ' '
         type: choice
         options:
-          - "--"
-          - "--prerelease"
-          - "--graduate"
+          - '--'
+          - '--prerelease'
+          - '--graduate'
 
 jobs:
   create_release:
@@ -24,8 +24,8 @@ jobs:
           fetch-depth: 0
       - name: Setup git
         run: |
-          git config user.name "An Tran"
-          git config user.email "tranthaian3591@gmail.com"
+          git config user.name "MimirActionsBot"
+          git config user.email "mimir-bot@gsconrad.com"
       - uses: subosito/flutter-action@v2
       - uses: bluefireteam/melos-action@v2
 

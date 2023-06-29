@@ -15,9 +15,6 @@ analyzer:
     - '**.freezed.dart'
     - '**.g.dart'
     - '**/bridge_generated.*dart'
-    # - lib/src/bridge_generated.dart
-    # - lib/src/bridge_generated.io.dart
-    # - lib/src/bridge_generated.web.dart
     - test/.test_coverage.dart
     - lib/generated_plugin_registrant.dart
 

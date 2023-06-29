@@ -1,9 +1,13 @@
-name: vysma_design
-
-repository: https://github.com/tranthaian3591/ffi_plugin_test
+name: mimir
+repository: https://github.com/GregoryConrad/mimir
 
 packages:
   - packages/**
+
+command:
+  version:
+    hooks:
+      preCommit: bash scripts/version.sh
 
 scripts:
   analyze:
@@ -17,10 +21,6 @@ scripts:
   format:
     exec: dart format .
     description: Format a specific package in this project.
-
-  version:
-    description: Updates version numbers in all build files
-    run: bash scripts/version.sh
 
   build:
     run: melos run build:apple && melos run build:android && melos run build:other
@@ -45,13 +45,13 @@ scripts:
   test:dart:
     run: melos exec -c 1 --fail-fast -- "dart test test"
     description: Run Dart tests for a specific package in this project.
-    select-package:
+    packageFilters:
       flutter: false
-      dir-exists: test
+      dirExists: test
 
   test:flutter:
     run: melos exec -c 1 --fail-fast -- "flutter test test"
     description: Run Flutter tests for a specific package in this project.
-    select-package:
+    packageFilters:
       flutter: true
-      dir-exists: test
+      dirExists: test

@@ -1,10 +1,9 @@
-name: vysma_workspace
+name: mimir_workspace
 publish_to: none
 
 environment:
-  sdk: '>=3.0.5 <4.0.0'
+  sdk: '>=3.0.0 <4.0.0'
 
 dev_dependencies:
   analyzer: ^6.0.0
   melos: ^3.1.0
-  very_good_analysis: ^5.0.0+1

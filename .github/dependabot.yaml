@@ -2,22 +2,27 @@ version: 2
 enable-beta-ecosystems: true
 updates:
   - package-ecosystem: pub
-    directory: "/packages/vysma_design"
+    directory: "/"
     schedule:
       interval: weekly
   - package-ecosystem: pub
-    directory: "/packages/vysma_design/example"
+    directory: "/packages/mimir"
+    versioning-strategy: increase # https://github.com/dependabot/dependabot-core/issues/6446
     schedule:
       interval: weekly
   - package-ecosystem: pub
-    directory: "/packages/flutter_vysma_design"
+    directory: "/packages/mimir/example"
     schedule:
       interval: weekly
   - package-ecosystem: pub
-    directory: "/packages/flutter_vysma_design/example"
+    directory: "/packages/flutter_mimir"
+    schedule:
+      interval: weekly
+  - package-ecosystem: pub
+    directory: "/packages/flutter_mimir/example"
     schedule:
       interval: weekly
   - package-ecosystem: cargo
-    directory: "/packages/vysma_design/native"
+    directory: "/packages/mimir/native"
     schedule:
       interval: weekly
