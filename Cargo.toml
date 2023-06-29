@@ -1,2 +1,2 @@
 [workspace]
-members = ["packages/mimir/native"]
+members = ["packages/vysma_design/native"]

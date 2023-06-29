@@ -24,8 +24,8 @@ jobs:
           fetch-depth: 0
       - name: Setup git
         run: |
-          git config user.name "MimirActionsBot"
-          git config user.email "mimir-bot@gsconrad.com"
+          git config user.name "tranthaian3591"
+          git config user.email "tranthaian3591@gmail.com"
       - uses: subosito/flutter-action@v2
       - uses: bluefireteam/melos-action@v2
 

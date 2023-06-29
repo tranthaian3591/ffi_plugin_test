@@ -6,23 +6,23 @@ updates:
     schedule:
       interval: weekly
   - package-ecosystem: pub
-    directory: "/packages/mimir"
+    directory: "/packages/vysma_design"
     versioning-strategy: increase # https://github.com/dependabot/dependabot-core/issues/6446
     schedule:
       interval: weekly
   - package-ecosystem: pub
-    directory: "/packages/mimir/example"
+    directory: "/packages/vysma_design/example"
     schedule:
       interval: weekly
   - package-ecosystem: pub
-    directory: "/packages/flutter_mimir"
+    directory: "/packages/flutter_vysma_design"
     schedule:
       interval: weekly
   - package-ecosystem: pub
-    directory: "/packages/flutter_mimir/example"
+    directory: "/packages/flutter_vysma_design/example"
     schedule:
       interval: weekly
   - package-ecosystem: cargo
-    directory: "/packages/mimir/native"
+    directory: "/packages/vysma_design/native"
     schedule:
       interval: weekly

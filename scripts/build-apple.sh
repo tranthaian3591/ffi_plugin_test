@@ -16,8 +16,8 @@ do
 done
 
 # Create XCFramework zip
-FRAMEWORK="EmbeddedMilli.xcframework"
-LIBNAME=libembedded_milli.a
+FRAMEWORK="VysmaDesignLayout.xcframework"
+LIBNAME=libvysma_design_layout.a
 mkdir mac-lipo ios-sim-lipo
 IOS_SIM_LIPO=ios-sim-lipo/$LIBNAME
 MAC_LIPO=mac-lipo/$LIBNAME

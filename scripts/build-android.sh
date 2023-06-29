@@ -28,7 +28,7 @@ cargo ndk -o $JNI_DIR \
 
 # Archive the dynamic libs
 cd $JNI_DIR
-tar -czvf ../EmbeddedMilliAndroid.tar.gz *
+tar -czvf ../android.tar.gz *
 cd -
 
 # Cleanup
