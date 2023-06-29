@@ -1,4 +1,4 @@
-set(LibraryVersion "vysma_design-v0.0.1") # generated; do not edit
+set(LibraryVersion "vysma_design-v0.0.2") # generated; do not edit
 
 # TODO Remove this workaround once Flutter supports Windows ARM.
 # https://github.com/flutter/flutter/issues/116196
@@ -19,7 +19,7 @@ set(LibRoot "${CMAKE_CURRENT_SOURCE_DIR}/${LibraryVersion}")
 set(ArchivePath "${LibRoot}.tar.gz")
 if(NOT EXISTS ${ArchivePath})
   file(DOWNLOAD
-    "https://github.com/tranthaian3591/ffi_plugin_test/releases/download/${LibraryVersion}/EmbeddedMilli.tar.gz"
+    "https://github.com/tranthaian3591/ffi_plugin_test/releases/download/${LibraryVersion}/other.tar.gz"
     ${ArchivePath}
     TLS_VERIFY ON
   )

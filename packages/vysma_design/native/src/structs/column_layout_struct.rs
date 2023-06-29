@@ -17,20 +17,6 @@ pub struct VysmaColumnLayoutSetting {
 }
 
 impl VysmaColumnLayoutSetting {
-    pub fn new(
-        element_id: String,
-        parent_element_id: String,
-        icon: String,
-        label: String,
-    ) -> VysmaColumnLayoutSetting {
-        VysmaColumnLayoutSetting {
-            element_id,
-            parent_element_id,
-            icon,
-            label,
-        }
-    }
-
     pub fn default_setting() -> VysmaColumnLayoutSetting {
         VysmaColumnLayoutSetting {
             icon: "assets/icons/column.svg".to_string(),

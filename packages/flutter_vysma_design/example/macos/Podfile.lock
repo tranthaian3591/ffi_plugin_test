@@ -1,5 +1,5 @@
 PODS:
-  - flutter_vysma_design (0.0.1)
+  - flutter_vysma_design (0.0.2)
   - FlutterMacOS (1.0.0)
   - path_provider_foundation (0.0.1):
     - Flutter
@@ -19,7 +19,7 @@ EXTERNAL SOURCES:
     :path: Flutter/ephemeral/.symlinks/plugins/path_provider_foundation/darwin
 
 SPEC CHECKSUMS:
-  flutter_vysma_design: 1541d0d6edd7edf6d7f4a4f968636ead03bbfe74
+  flutter_vysma_design: bdb40b4f5696f56a544ddcc57e25053d2434af5f
   FlutterMacOS: 8f6f14fa908a6fb3fba0cd85dbd81ec4b251fb24
   path_provider_foundation: eaf5b3e458fc0e5fbb9940fb09980e853fe058b8
 

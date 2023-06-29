@@ -13,6 +13,5 @@ abstract class VysmaDesignInstance {
   /// When in doubt, just stick with a-z, A-Z, 0-9, -, and _ for the name.
   ///
   /// If you know any settings of the index in advance (such as a primary key),
-  /// it is preferred to use [openIndex] instead.
   VysmaDesignIndex getIndex(String name);
 }

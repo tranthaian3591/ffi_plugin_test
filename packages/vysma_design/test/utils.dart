@@ -2,14 +2,11 @@ import 'dart:convert';
 import 'dart:ffi';
 import 'dart:io';
 
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:vysma_design/vysma_design.dart';
 import 'package:test/test.dart';
-
-part 'utils.freezed.dart';
+import 'package:vysma_design/vysma_design.dart';
 
 DynamicLibrary useLibrary() {
-  const libName = 'embedded_milli';
+  const libName = 'vysma_design_layout';
   final libPrefix = {
     Platform.isWindows: '',
     Platform.isMacOS: 'lib',

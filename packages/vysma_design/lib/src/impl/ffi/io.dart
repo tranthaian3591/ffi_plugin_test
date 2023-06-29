@@ -15,4 +15,5 @@ VysmaDesignLayout createWrapperImpl(ExternalLibrary dylib) =>
     VysmaDesignLayoutImpl(dylib);
 
 @internal
+// ignore: public_member_api_docs
 String? tmpDir() => Platform.isAndroid ? Directory.systemTemp.path : null;

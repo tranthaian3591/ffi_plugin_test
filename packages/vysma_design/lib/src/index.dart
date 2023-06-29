@@ -1,5 +1,6 @@
 import 'package:vysma_design/src/bridge_generated.dart';
 
+// ignore: public_member_api_docs
 abstract class VysmaDesignIndex {
   /// The path-friendly name (id) of this index
   String get name;
@@ -21,8 +22,10 @@ abstract class VysmaDesignIndex {
   Future<VysmaColumnLayoutSetting> getColumnLayoutDefaultSetting();
 
   /// stringToSetting
-  Future<dynamic> stringToSetting(
-      {required WidgetType widgetType, required String settingAsString});
+  Future<dynamic> stringToSetting({
+    required WidgetType widgetType,
+    required String settingAsString,
+  });
 
   /// createRootWidgetTree
   Future<VysmaColumnLayoutSetting> createRootWidgetTree();

@@ -12,7 +12,7 @@ dependencies:
   http: ^1.0.0
 
   # You can replace this with the current version of vysma_design
-  vysma_design: ^0.0.1
+  vysma_design: ^0.0.2
 
 dev_dependencies:
   lints: ^2.0.0

@@ -35,7 +35,7 @@ Future<void> run(String path, DynamicLibrary lib) async {
 DynamicLibrary getLibrary() {
   // If you are running this example locally, you will need to run
   // `cargo build -r` to generate the needed dylib.
-  const libName = 'embedded_milli';
+  const libName = 'vysma_design_layout';
   final libPrefix = {
     Platform.isWindows: '',
     Platform.isMacOS: 'lib',

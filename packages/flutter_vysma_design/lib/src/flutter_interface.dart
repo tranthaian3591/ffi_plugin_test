@@ -7,7 +7,8 @@ import 'ffi/stub.dart'
     if (dart.library.io) 'ffi/io.dart'
     if (dart.library.html) 'ffi/web.dart';
 
-/// Flutter extensions for the VysmaDesignInterface to make it easier to work with
+/// Flutter extensions for the VysmaDesignInterface to
+/// make it easier to work with
 extension FlutterVysmaDesignInterface on VysmaDesignInterface {
   /// Creates the default [VysmaDesignInstance] instance for Flutter
   Future<VysmaDesignInstance> get defaultInstance {
@@ -15,7 +16,8 @@ extension FlutterVysmaDesignInterface on VysmaDesignInterface {
     return getInstanceForName(defaultName);
   }
 
-  /// Creates a [VysmaDesignInstance] with the given path-friendly [name] for Flutter
+  /// Creates a [VysmaDesignInstance] with the
+  /// given path-friendly [name] for Flutter
   Future<VysmaDesignInstance> getInstanceForName(String name) async {
     try {
       const defaultSubDir = 'vysma_design';
@@ -25,7 +27,8 @@ extension FlutterVysmaDesignInterface on VysmaDesignInterface {
     } on pp.MissingPlatformDirectoryException {
       throw UnsupportedError(
         'Looks like this platform does not have an application support '
-        'directory. Please call VysmaDesign.getInstanceForPath(someDirPath) instead.',
+        'directory. Please call VysmaDesign.getInstanceForPath(someDirPath) '
+        'instead.',
       );
     }
   }

@@ -12,4 +12,5 @@ VysmaDesignLayout createWrapperImpl(ExternalLibrary lib) =>
     throw UnimplementedError();
 
 @internal
+// ignore: public_member_api_docs
 String? tmpDir() => null;

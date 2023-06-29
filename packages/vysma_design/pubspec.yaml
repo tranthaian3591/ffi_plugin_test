@@ -1,6 +1,6 @@
 name: vysma_design
 description: Vyma Design Library
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/tranthaian3591/ffi_plugin_test
 repository: https://github.com/tranthaian3591/ffi_plugin_test
 issue_tracker: https://github.com/tranthaian3591/ffi_plugin_test/issues
@@ -10,12 +10,12 @@ environment:
 
 dependencies:
   ffi: ^2.0.1
-  flutter_rust_bridge: 1.78.0
+  flutter_rust_bridge: ^1.78.0
   freezed_annotation: ^2.2.0
   meta: ^1.8.0
 
   # TODO https://github.com/fzyzcjy/flutter_rust_bridge/issues/1147
-  uuid: any
+  uuid: ^3.0.7
 
 dev_dependencies:
   build_runner: ^2.3.2

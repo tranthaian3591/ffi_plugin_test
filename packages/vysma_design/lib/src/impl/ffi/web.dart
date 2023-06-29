@@ -13,4 +13,5 @@ VysmaDesignLayout createWrapperImpl(ExternalLibrary module) =>
     VysmaDesignLayoutImpl.wasm(module);
 
 @internal
+// ignore: public_member_api_docs
 String? tmpDir() => null;

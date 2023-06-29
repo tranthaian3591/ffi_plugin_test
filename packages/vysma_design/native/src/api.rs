@@ -53,7 +53,6 @@ pub fn widget_type_to_name(widget_type: WidgetType) -> Result<String> {
         WidgetType::Button => Ok("Button".to_string()),
         WidgetType::Text => Ok("Text".to_string()),
         WidgetType::Icon => Ok("Icon".to_string()),
-        _ => Ok("".to_string()),
     }
 }
 
@@ -65,7 +64,6 @@ pub fn widget_type_to_icon(widget_type: WidgetType) -> Result<String> {
         WidgetType::Button => Ok("assets/icons/row.svg".to_string()),
         WidgetType::Text => Ok("assets/icons/row.svg".to_string()),
         WidgetType::Icon => Ok("assets/icons/row.svg".to_string()),
-        _ => Ok("".to_string()),
     }
 }
 

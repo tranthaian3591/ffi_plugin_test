@@ -32,7 +32,7 @@ jobs:
         run: cargo clippy -- -D warnings
       - name: Run Rust tests
         run: cargo test
-      - name: Build Rust code (embedded_milli) for Dart tests
+      - name: Build Rust code (vysma_design_layout) for Dart tests
         run: cargo build -r
 
       # Dart/Flutter
@@ -60,7 +60,7 @@ jobs:
       - name: Copy the XCFramework to the needed location
         run: |
           CURR_VERSION=vysma_design-v`awk '/^version: /{print $2}' packages/vysma_design/pubspec.yaml`
-          cp platform-build/EmbeddedMilli.xcframework.zip packages/flutter_vysma_design/macos/Frameworks/$CURR_VERSION.zip
+          cp platform-build/VysmaDesignLayout.xcframework.zip packages/flutter_vysma_design/macos/Frameworks/$CURR_VERSION.zip
           echo Copied file!
 
       - name: Run Flutter integration tests
@@ -87,7 +87,7 @@ jobs:
         shell: bash
         run: |
           CURR_VERSION=vysma_design-v`awk '/^version: /{print $2}' packages/vysma_design/pubspec.yaml`
-          cp platform-build/EmbeddedMilli.tar.gz packages/flutter_vysma_design/windows/$CURR_VERSION.tar.gz
+          cp platform-build/order.tar.gz packages/flutter_vysma_design/windows/$CURR_VERSION.tar.gz
           echo Copied file!
 
       - name: Run Flutter integration tests
@@ -114,7 +114,7 @@ jobs:
       - name: Copy the binaries to the needed location
         run: |
           CURR_VERSION=vysma_design-v`awk '/^version: /{print $2}' packages/vysma_design/pubspec.yaml`
-          cp platform-build/EmbeddedMilli.tar.gz packages/flutter_vysma_design/linux/$CURR_VERSION.tar.gz
+          cp platform-build/order.tar.gz packages/flutter_vysma_design/linux/$CURR_VERSION.tar.gz
           echo Copied file!
 
       - name: Run Flutter integration tests
@@ -143,7 +143,7 @@ jobs:
       - name: Copy the XCFramework to the needed location
         run: |
           CURR_VERSION=vysma_design-v`awk '/^version: /{print $2}' packages/vysma_design/pubspec.yaml`
-          cp platform-build/EmbeddedMilli.xcframework.zip packages/flutter_vysma_design/ios/Frameworks/$CURR_VERSION.zip
+          cp platform-build/VysmaDesignLayout.xcframework.zip packages/flutter_vysma_design/ios/Frameworks/$CURR_VERSION.zip
           echo Copied file!
 
       - name: Run Flutter integration tests
@@ -173,7 +173,7 @@ jobs:
       - name: Copy the binaries to the needed location
         run: |
           CURR_VERSION=vysma_design-v`awk '/^version: /{print $2}' packages/vysma_design/pubspec.yaml`
-          cp platform-build/EmbeddedMilliAndroid.tar.gz packages/flutter_vysma_design/android/$CURR_VERSION.tar.gz
+          cp platform-build/android.tar.gz packages/flutter_vysma_design/android/$CURR_VERSION.tar.gz
           echo Copied file!
 
       - name: Run Flutter integration tests

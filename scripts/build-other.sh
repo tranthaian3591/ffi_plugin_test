@@ -30,15 +30,15 @@ win_build () {
 }
 
 # Build all the dynamic libraries
-LINUX_LIBNAME=libembedded_milli.so
+LINUX_LIBNAME=libvysma_design_layout.so
 zig_build aarch64-unknown-linux-gnu linux-arm64 $LINUX_LIBNAME
 zig_build x86_64-unknown-linux-gnu linux-x64 $LINUX_LIBNAME
-WINDOWS_LIBNAME=embedded_milli.dll
+WINDOWS_LIBNAME=vysma_design_layout.dll
 win_build aarch64-pc-windows-msvc windows-arm64 $WINDOWS_LIBNAME
 win_build x86_64-pc-windows-msvc windows-x64 $WINDOWS_LIBNAME
 
 # Archive the dynamic libs
-tar -czvf EmbeddedMilli.tar.gz linux-* windows-*
+tar -czvf other.tar.gz linux-* windows-*
 
 # Cleanup
 rm -rf linux-* windows-*

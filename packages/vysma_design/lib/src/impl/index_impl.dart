@@ -19,8 +19,9 @@ class VysmaDesignIndexImpl extends VysmaDesignIndex {
   VysmaDesignLayout get vysmaDesignLayout => instance.vysmaDesignLayout;
 
   @override
-  Future<VysmaColumnLayoutSetting?> stringToColumnLayoutSetting(
-      {required String data}) {
+  Future<VysmaColumnLayoutSetting?> stringToColumnLayoutSetting({
+    required String data,
+  }) {
     return vysmaDesignLayout.stringToColumnLayoutSetting(data: data);
   }
 
@@ -48,8 +49,10 @@ class VysmaDesignIndexImpl extends VysmaDesignIndex {
   }
 
   @override
-  Future<dynamic> stringToSetting(
-      {required WidgetType widgetType, required String settingAsString}) async {
+  Future<dynamic> stringToSetting({
+    required WidgetType widgetType,
+    required String settingAsString,
+  }) async {
     switch (widgetType) {
       case WidgetType.Column:
       case WidgetType.Root:
