@@ -14,7 +14,7 @@ void main() {
     // async/await when trying ot get an instance or an index!
     final index = instance.getIndex('default');
 
-    final name = index.widgetTypeToName(widgetType: WidgetType.Column);
+    final name = await index.widgetTypeToName(widgetType: WidgetType.Column);
     expect(name, 'Column');
   });
 }
