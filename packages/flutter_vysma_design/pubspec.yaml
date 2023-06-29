@@ -1,6 +1,6 @@
 name: flutter_vysma_design
 description: Flutter Vysma Design Library 
-version: 0.0.2
+version: 0.0.6
 homepage: https://github.com/tranthaian3591/ffi_plugin_test
 repository: https://github.com/tranthaian3591/ffi_plugin_test
 issue_tracker: https://github.com/tranthaian3591/ffi_plugin_test/issues
@@ -15,7 +15,7 @@ dependencies:
   meta: ^1.8.0
   path: ^1.8.2
   path_provider: ^2.0.11
-  vysma_design: ^0.0.2
+  vysma_design: ^0.0.6
 
 dev_dependencies:
   flutter_test:

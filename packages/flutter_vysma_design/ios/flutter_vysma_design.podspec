@@ -1,4 +1,4 @@
-release_tag_name = 'vysma_design-v0.0.2' # generated; do not edit
+release_tag_name = 'vysma_design-v0.0.6' # generated; do not edit
 
 # We cannot distribute the XCFramework alongside the library directly,
 # so we have to fetch the correct version here.
@@ -21,7 +21,7 @@ cd -
 
 Pod::Spec.new do |spec|
   spec.name          = 'flutter_vysma_design'
-  spec.version       = '0.0.2'
+  spec.version       = '0.0.6'
   spec.license       = { :file => '../LICENSE' }
   spec.homepage      = 'https://github.com/tranthaian3591/ffi_plugin_test'
   spec.authors       = { 'An Tran' => 'tranthaian3591@gmail.com' }

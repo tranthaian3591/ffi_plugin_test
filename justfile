@@ -3,7 +3,7 @@ test_macos: build_apple
 
 build_apple:
   melos run build:apple
-  cp platform-build/VysmaDesignLayout.xcframework.zip packages/flutter_vysma_design/macos/Frameworks/vysma_design-v0.0.2.zip
+  cp platform-build/VysmaDesignLayout.xcframework.zip packages/flutter_vysma_design/macos/Frameworks/vysma_design-v0.0.6.zip
   # Unknown how to get current version of library
   # cp platform-build/VysmaDesignLayout.xcframework.zip packages/flutter_vysma_design/macos/Frameworks/$CURR_VERSION.zip
 
