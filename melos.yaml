@@ -10,9 +10,9 @@ command:
       preCommit: bash scripts/version.sh
 
 scripts:
-  run-mac-local:
-    run: bash scripts/run-mac-local.sh.sh
-    description: Run MacOS Locally
+  build_macos_local:
+    run: bash scripts/build_macos_local.sh
+    description: Build MacOS Locally
 
   analyze:
     exec: flutter analyze .
