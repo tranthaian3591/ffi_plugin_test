@@ -1,4 +1,4 @@
-set(LibraryVersion "vysma_design-v0.0.6") # generated; do not edit
+set(LibraryVersion "vysma_design-v0.0.7") # generated; do not edit
 
 # The Flutter tooling requires that developers have CMake 3.10 or later
 # installed. You should not increase this version, as doing so will cause

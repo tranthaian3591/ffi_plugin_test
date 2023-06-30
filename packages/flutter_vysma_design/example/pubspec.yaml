@@ -11,8 +11,8 @@ dependencies:
     sdk: flutter
 
   # You can replace these with the latest versions
-  flutter_vysma_design: ^0.0.6
-  vysma_design: ^0.0.6
+  flutter_vysma_design: ^0.0.1
+  vysma_design: ^0.0.1
 
   # These two are needed for the example; they are not required by vysma_design
   hooks_riverpod: ^2.1.1
