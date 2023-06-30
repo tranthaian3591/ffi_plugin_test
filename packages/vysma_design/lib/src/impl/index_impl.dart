@@ -80,4 +80,9 @@ class VysmaDesignIndexImpl extends VysmaDesignIndex {
   Future<String> widgetTypeToName({required WidgetType widgetType}) {
     return vysmaDesignLayout.widgetTypeToName(widgetType: widgetType);
   }
+
+  @override
+  Future<String> helloWorld() {
+    return vysmaDesignLayout.helloWorld();
+  }
 }

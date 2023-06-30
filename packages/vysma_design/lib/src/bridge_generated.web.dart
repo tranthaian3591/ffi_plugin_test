@@ -78,6 +78,8 @@ class VysmaDesignLayoutWasmModule implements WasmModule {
 
   external dynamic /* void */ wire_widget_type_to_icon(
       NativePortType port_, int widget_type);
+
+  external dynamic /* void */ wire_hello_world(NativePortType port_);
 }
 
 // Section: WASM wire connector
@@ -106,4 +108,7 @@ class VysmaDesignLayoutWire
 
   void wire_widget_type_to_icon(NativePortType port_, int widget_type) =>
       wasmModule.wire_widget_type_to_icon(port_, widget_type);
+
+  void wire_hello_world(NativePortType port_) =>
+      wasmModule.wire_hello_world(port_);
 }

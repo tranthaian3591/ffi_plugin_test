@@ -107,6 +107,16 @@ fn wire_widget_type_to_icon_impl(
         },
     )
 }
+fn wire_hello_world_impl(port_: MessagePort) {
+    FLUTTER_RUST_BRIDGE_HANDLER.wrap(
+        WrapInfo {
+            debug_name: "hello_world",
+            port: Some(port_),
+            mode: FfiCallMode::Normal,
+        },
+        move || move |task_callback| hello_world(),
+    )
+}
 // Section: wrapper structs
 
 // Section: static checks
@@ -209,6 +219,11 @@ mod web {
     #[wasm_bindgen]
     pub fn wire_widget_type_to_icon(port_: MessagePort, widget_type: i32) {
         wire_widget_type_to_icon_impl(port_, widget_type)
+    }
+
+    #[wasm_bindgen]
+    pub fn wire_hello_world(port_: MessagePort) {
+        wire_hello_world_impl(port_)
     }
 
     // Section: allocate functions
@@ -316,6 +331,11 @@ mod io {
     #[no_mangle]
     pub extern "C" fn wire_widget_type_to_icon(port_: i64, widget_type: i32) {
         wire_widget_type_to_icon_impl(port_, widget_type)
+    }
+
+    #[no_mangle]
+    pub extern "C" fn wire_hello_world(port_: i64) {
+        wire_hello_world_impl(port_)
     }
 
     // Section: allocate functions

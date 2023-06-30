@@ -251,6 +251,20 @@ class VysmaDesignLayoutWire implements FlutterRustBridgeWireBase {
   late final _wire_widget_type_to_icon =
       _wire_widget_type_to_iconPtr.asFunction<void Function(int, int)>();
 
+  void wire_hello_world(
+    int port_,
+  ) {
+    return _wire_hello_world(
+      port_,
+    );
+  }
+
+  late final _wire_hello_worldPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Int64)>>(
+          'wire_hello_world');
+  late final _wire_hello_world =
+      _wire_hello_worldPtr.asFunction<void Function(int)>();
+
   ffi.Pointer<wire_VysmaColumnLayoutSetting>
       new_box_autoadd_vysma_column_layout_setting_0() {
     return _new_box_autoadd_vysma_column_layout_setting_0();

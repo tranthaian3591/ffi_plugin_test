@@ -44,6 +44,10 @@ abstract class VysmaDesignLayout {
       {required WidgetType widgetType, dynamic hint});
 
   FlutterRustBridgeTaskConstMeta get kWidgetTypeToIconConstMeta;
+
+  Future<String> helloWorld({dynamic hint});
+
+  FlutterRustBridgeTaskConstMeta get kHelloWorldConstMeta;
 }
 
 class VysmaColumnLayoutSetting {
@@ -184,6 +188,22 @@ class VysmaDesignLayoutImpl implements VysmaDesignLayout {
       const FlutterRustBridgeTaskConstMeta(
         debugName: "widget_type_to_icon",
         argNames: ["widgetType"],
+      );
+
+  Future<String> helloWorld({dynamic hint}) {
+    return _platform.executeNormal(FlutterRustBridgeTask(
+      callFfi: (port_) => _platform.inner.wire_hello_world(port_),
+      parseSuccessData: _wire2api_String,
+      constMeta: kHelloWorldConstMeta,
+      argValues: [],
+      hint: hint,
+    ));
+  }
+
+  FlutterRustBridgeTaskConstMeta get kHelloWorldConstMeta =>
+      const FlutterRustBridgeTaskConstMeta(
+        debugName: "hello_world",
+        argNames: [],
       );
 
   void dispose() {

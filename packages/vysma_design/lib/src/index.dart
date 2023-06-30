@@ -35,4 +35,7 @@ abstract class VysmaDesignIndex {
 
   /// widgetTypeToName
   Future<String> widgetTypeToName({required WidgetType widgetType});
+
+  /// helloWorld
+  Future<String> helloWorld();
 }
