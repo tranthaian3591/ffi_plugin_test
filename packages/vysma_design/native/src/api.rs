@@ -70,5 +70,5 @@ pub fn widget_type_to_icon(widget_type: WidgetType) -> Result<String> {
 // end region widgetType
 
 pub fn hello_world() -> Result<String> {
-    Ok("Hello World".to_string())
+    Ok("Hello World 123".to_string())
 }
