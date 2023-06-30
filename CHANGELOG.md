@@ -11,6 +11,33 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 Packages with breaking changes:
 
+ - [`vysma_design` - `v0.2.0`](#vysma_design---v020)
+
+Packages with other changes:
+
+ - [`flutter_vysma_design` - `v0.0.7+3`](#flutter_vysma_design---v0073)
+
+Packages with dependency updates only:
+
+> Packages listed below depend on other packages in this workspace that have had changes. Their versions have been incremented to bump the minimum dependency versions of the packages they depend upon in this project.
+
+ - `flutter_vysma_design` - `v0.0.7+3`
+
+---
+
+#### `vysma_design` - `v0.2.0`
+
+ - **BREAKING** **FEAT**(api): send an email to the customer when a product is shipped. ([c17569c8](https://github.com/tranthaian3591/ffi_plugin_test/commit/c17569c86d65ce9837afe48f2651ef0b948f4ff4))
+
+
+## 2023-06-30
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
  - [`vysma_design` - `v0.1.0`](#vysma_design---v010)
 
 Packages with other changes:

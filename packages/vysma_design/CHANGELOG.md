@@ -1,3 +1,9 @@
+## 0.2.0
+
+> Note: This release has breaking changes.
+
+ - **BREAKING** **FEAT**(api): send an email to the customer when a product is shipped. ([c17569c8](https://github.com/tranthaian3591/ffi_plugin_test/commit/c17569c86d65ce9837afe48f2651ef0b948f4ff4))
+
 ## 0.1.0
 
 > Note: This release has breaking changes.
