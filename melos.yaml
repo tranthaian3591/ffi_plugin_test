@@ -10,6 +10,10 @@ command:
       preCommit: bash scripts/version.sh
 
 scripts:
+  run-mac-local:
+    run: bash scripts/run-mac-local.sh.sh
+    description: Run MacOS Locally
+
   analyze:
     exec: flutter analyze .
     description: Analyze a specific package in this project.

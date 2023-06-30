@@ -1,12 +1,12 @@
-test_macos: build_apple
-    cd packages/flutter_vysma_design/example && flutter test -d macos integration_test
+current_vesion := "v0.0.0"
 
-build_apple:
+run_macos_local:
   melos run build:apple
-  cp platform-build/VysmaDesignLayout.xcframework.zip packages/flutter_vysma_design/macos/Frameworks/vysma_design-v0.0.7.zip
-  # Unknown how to get current version of library
-  # cp platform-build/VysmaDesignLayout.xcframework.zip packages/flutter_vysma_design/macos/Frameworks/$CURR_VERSION.zip
+  cd packages/flutter_vysma_design/macos/ && rm -rf Frameworks && touch .gitkeep
+  cp platform-build/VysmaDesignLayout.xcframework.zip packages/flutter_vysma_design/macos/Frameworks/{{current_vesion}}.zip
+  cd packages/flutter_vysma_design/example/macos && rm Podfile.lock && pod install
 
-clean:
-    melos clean
-    cd packages/vysma_design/native && cargo clean
+
+# clean: 
+#   melos clean
+#   cd packages/vysma_design/native && cargo clean
