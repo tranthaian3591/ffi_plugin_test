@@ -46,6 +46,8 @@ void wire_widget_type_to_name(int64_t port_, int32_t widget_type);
 
 void wire_widget_type_to_icon(int64_t port_, int32_t widget_type);
 
+void wire_hello_world(int64_t port_);
+
 struct wire_VysmaColumnLayoutSetting *new_box_autoadd_vysma_column_layout_setting_0(void);
 
 struct wire_uint_8_list *new_uint_8_list_0(int32_t len);
@@ -60,6 +62,7 @@ static int64_t dummy_method_to_enforce_bundling(void) {
     dummy_var ^= ((int64_t) (void*) wire_string_to_column_layout_setting);
     dummy_var ^= ((int64_t) (void*) wire_widget_type_to_name);
     dummy_var ^= ((int64_t) (void*) wire_widget_type_to_icon);
+    dummy_var ^= ((int64_t) (void*) wire_hello_world);
     dummy_var ^= ((int64_t) (void*) new_box_autoadd_vysma_column_layout_setting_0);
     dummy_var ^= ((int64_t) (void*) new_uint_8_list_0);
     dummy_var ^= ((int64_t) (void*) free_WireSyncReturn);

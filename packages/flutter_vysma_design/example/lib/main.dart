@@ -10,6 +10,10 @@ void main() async {
   final instance = await VysmaDesign.defaultInstance;
   final index = instance.getIndex('default');
 
+  final a = await index.helloWorld();
+
+  print(a);
+
   // Finally, run our application.
   runApp(ProviderScope(
     overrides: [indexProvider.overrideWith((_) => index)],

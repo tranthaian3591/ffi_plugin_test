@@ -1,4 +1,4 @@
-release_tag_name = 'vysma_design-v0.0.7' # generated; do not edit
+release_tag_name = 'vysma_design-v0.0.8' # generated; do not edit
 
 # We cannot distribute the XCFramework alongside the library directly,
 # so we have to fetch the correct version here.
